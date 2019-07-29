@@ -8,7 +8,7 @@ import pymysql
 
 industryCode = "3982"
 pathDir=os.path.abspath('.')
-db=pymysql.connect("localhost","root","sustc@10","szwp_20190625")
+db=pymysql.connect("localhost","root","******","szwp_20190625")
 cursor = db.cursor()
 str_sql ="""Select `行政区`,`统一社会信用代码`,`单位详细名称`,replace(replace(`污染物排放量`,'吨',''),'千克','') as 污染物排放量,replace(replace(`污染物产生量`,'吨',''),'千克','') as 污染物产生量,`污染物名称` from `g106-1_产排污系数核算明细` where `行业代码`='3982'"""
 cursor.execute(str_sql)
